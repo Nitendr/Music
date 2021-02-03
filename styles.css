@@ -1,0 +1,194 @@
+* {
+    margin: 0cm;
+    padding: 0cm;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: "poppins";
+    font-weight: 300;
+    background-color: rgb(255, 255, 255);
+}
+
+.brand {
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    margin: 20px  20px;
+
+}
+.brand-name {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: rgb(0, 0, 0);
+    align-items: center;
+}
+
+nav {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.nav-item {
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    display: flex;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    width: 45%;
+    list-style: none;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-link {
+    padding: 0 60px 0;
+}
+
+.btn{
+    color: rgb(255, 255, 255);
+    padding: 15px 50px 15px;
+    border-radius: 15px;
+    background-image: linear-gradient(-65deg, #FF52F8 0%, #7F74C8 100%);
+}
+
+#container-1{
+    padding: 20px;
+    background-image: radial-gradient(rgb(255, 255, 255),rgb(184, 183, 183) );
+    height: 800px;
+
+    
+}
+
+.big-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.container-2 { 
+    position: absolute;
+    top: 0;
+    height: 800px;
+    width: 650px;
+
+}
+
+.container-2 h1 {
+    z-index: 2;
+    font-weight: 500;
+    font-size: 5.5rem;
+    position: absolute;
+    color: rgb(41, 41, 41);
+    bottom: 430px;
+    left: 145px;
+    animation: spin 0.3s linear 0s;
+
+}
+
+.headphone {
+    bottom: 0;
+    position: absolute;
+    height: 350px;
+    width: 450px;
+    animation: headphone 1.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+    /* animation-duration: 1.4s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-delay: 0s;  */
+}
+
+.container-3 h1 {
+    opacity: 0;
+    z-index: 3;
+    position: absolute;
+    left: 600px;
+    top: 400px;
+    background: linear-gradient(35deg, #FF52F8 0%, #7F74C8 80%, #604be7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 200px;
+    animation: model 1.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s forwards;
+}
+
+.model {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 540px;
+  height: 800px;
+  width: 775px;
+  animation: model 3s ease 0s forwards;
+}
+
+.ellipse1 {
+    border-radius: 100%;
+    position: absolute;
+width: 242px;
+height: 242px;
+left: 282px;
+top: 190px;
+animation: ellipse 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+background: linear-gradient(180deg, #FF52F8 0%, #7F74C8 100%);
+mix-blend-mode: normal;
+}
+
+.blur-background { 
+   width: 100%;
+   height: 500px;
+   background-color: aquamarine;
+}
+.box {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 500px;
+    background-color: rgb(255, 255, 255, 0.6);
+    backdrop-filter: blur(25px);
+}
+
+/* Animtion  */
+
+@keyframes headphone {
+    from {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    to  {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes model {
+    from {
+        /* transform: translateX(500px); */
+        opacity: 0;
+    }
+
+    to {
+        /* transform: translateX(0); */
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes ellipse {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1.3);
+    }
+}
